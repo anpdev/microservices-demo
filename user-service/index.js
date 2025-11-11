@@ -29,7 +29,7 @@ const authMiddleware = (req, res, next) => {
 };
 
 app.get("/", (req, res) => {
-  res.send('<h1>Testing user service CI / CD with docker </h1>');
+  res.send('<h1>Testing user service CI //// CD with docker hub </h1>');
 });
 
 
