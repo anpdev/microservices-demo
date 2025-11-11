@@ -33,14 +33,14 @@ jobs:
       #     This starts the container for testing within the GitHub Action runner
       - name: Run container locally for testing
         run: |
-          docker run -d -p 3001:3001 --name user-service-test user-service:latest
+          docker run -d -p 4001:4001 --name user-service-test user-service:latest
           sleep 5
           docker ps
 
       # 6️⃣ Health check endpoint (if available)
       - name: Test health endpoint
         run: |
-          curl -f http://localhost:3001/health || echo "Health endpoint not found or failed"
+          curl -f http://localhost:4001/health || echo "Health endpoint not found or failed"
 
       # 7️⃣ Stop and remove test container
       - name: Cleanup container
